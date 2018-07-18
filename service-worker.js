@@ -2,8 +2,8 @@
 
 self.addEventListener('fetch', function (event) {
 
-    if (navigator.connection.effectiveType === 'slow-2g' || '2g') {
-
+    // Check if the current request is slow 3g
+    if (/\slow-2g|2g/.test(navigator.connection.effectiveType) {
         // Check if the request is for an image
         if (/\.jpg$|.png$|.gif$|.webp$/.test(event.request.url)) {
 
