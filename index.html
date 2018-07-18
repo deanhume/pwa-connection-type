@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connection Type</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js');
+    }
+    else {
+        console.log('Service Worker functionality not supported.');
+    }
+</script>
+
+</html>
